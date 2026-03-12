@@ -331,7 +331,17 @@ body {
 .project-section:first-child { padding-top: 0; }
 .project-section:last-child { border-bottom: none; padding-bottom: 0; }
 
-.project-section .eyebrow { margin-bottom: 0.6rem; }
+.project-section .eyebrow {
+  margin-bottom: 0.6rem;
+  font-size: var(--eyebrow-size);
+  letter-spacing: var(--eyebrow-spacing);
+  text-transform: uppercase;
+  color: var(--eyebrow-color);
+  font-weight: var(--eyebrow-weight);
+  font-family: var(--eyebrow-font);
+  font-style: normal;
+  line-height: normal;
+}
 
 .project-section h2 {
   font-size: 1.6rem;
@@ -387,14 +397,19 @@ body {
 @media (max-width: 1200px) {
   .page { padding-top: 2rem; }
   .hero-grid { grid-template-columns: 1fr; gap: 3rem; }
-  .hero-right { order: -1; }
+  .hero-left { text-align: center; }
+  .hero-left h1 { margin-left: auto; margin-right: auto; }
+  .hero-sub { margin-left: auto; margin-right: auto; }
+  .hero-left .btn { margin: 0 auto; }
+  .hero-right { justify-content: center; }
   .hero-visual-block { max-width: 380px; }
 }
 
 @media (max-width: 768px) {
   .section { min-height: auto; padding-top: 3.5rem; padding-bottom: 3.5rem; }
   .project-hero-grid { grid-template-columns: 1fr; gap: 2.2rem; }
-  .hero-visual-block { max-width: 300px; }
+  .hero-visual-block { max-width: 280px; }
+  .hero-left h1 { font-size: clamp(2rem, 6vw, 3rem); }
 }
 
 @media (max-width: 640px) {
